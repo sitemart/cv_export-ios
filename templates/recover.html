@@ -1,0 +1,16 @@
+<ion-view id="recoverPage" class="no-header adminPage" hide-nav-bar="true">
+    <ion-content padding="true">
+        <img src="img/logo.png" class="admin_logo" />
+        <form id="recover-form" class="list adminForm">
+            <ion-list id="recover-list5" class=" ">
+                <label class="item item-input " id="recover-input10">
+                    <span class="input-label">Email</span>
+                    <input type="email" placeholder="Recover login" class="resetemail" autocomplete="off">
+                </label>
+            </ion-list>
+
+            <button id="recover-button4" class=" button button-balanced  button-block " ng-click="recoverLogin()">Recover</button>
+            <a href="#/signup" class="button button-positive  button-block button-clear ">Or create an account</a>
+        </form>
+    </ion-content>
+</ion-view>

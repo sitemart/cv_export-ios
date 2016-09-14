@@ -1,0 +1,24 @@
+<ion-view title="" id="signupPage" class="no-header adminPage"  hide-nav-bar="true">
+    <ion-content padding="true">
+        <img src="img/logo.png" class="admin_logo" />
+        <form id="signup-form" class="list adminForm">
+            <ion-list id="signup-list4" class=" ">
+                <label class="item item-input " id="signup-input6">
+                    <span class="input-label">Username</span>
+                    <input type="text" placeholder="" class="regUser">
+                </label>
+                <label class="item item-input " id="signup-input4">
+                    <span class="input-label">Email</span>
+                    <input type="email" placeholder="" class="regEmail" autocomplete="off">
+                </label>
+                <label class="item item-input " id="signup-input5">
+                    <span class="input-label">Password</span>
+                    <input type="password" placeholder="" class="resPassword" autocomplete="off">
+                </label>
+            </ion-list>
+            <button class=" button button-balanced  button-block" ng-click="signup()">Sign up</button>
+            <a  href="#/login" class="button button-clear button-block">Login</a>
+        </form>
+
+    </ion-content>
+</ion-view>

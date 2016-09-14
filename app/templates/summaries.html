@@ -1,0 +1,32 @@
+<ion-view title=" ">
+    <ion-nav-buttons  side="right" side="primary">
+        <a class="button" href="#/Status"><i class="icon ion-ios-person"></i> </a>
+        <button ng-if="summaries.length === 0" class="button" ng-click="itemAdd(item)"><i class="icon ion-android-add"></i> </button>
+        <button ng-if="summaries.length > 0" class="button" ng-click="data.showDelete = !data.showDelete;"><i class="icon ion-ios-trash-outline"></i> </button>
+        <button ng-if="summaries.length > 0" class="button" ng-click="data.showDelete = false; data.showReorder = !data.showReorder"><i class="icon ion-compose"></i> </button>
+
+    </ion-nav-buttons>
+    <ion-sub-head class="bar bar-subheader">
+        <h3 class="title">Summaries</h3>
+    </ion-sub-head>
+    <ion-content padding="true" class="has-header has-subheader">
+        <div ng-if="summaries.length === 0" class="emptyPageBlock">
+            <img src="../img/education.svg"  style="opacity: 0.3; max-height: 120px;">
+            <h3 class="nomargin">Empty data section</h3>
+            <p class="nomargin">Enter relevant information that'll <br />appear on your cv</p>
+            <button class="button button-stable" ng-click="itemAdd(item)">
+                Create
+            </button>
+        </div>
+        <ion-list show-delete="data.showDelete" show-edit="data.showEdit" show-reorder="data.showReorder" ng-if="summaries.length > 0">
+            <ion-item ng-repeat="summary in summaries" summary="summary"  on-swipe-left="onItemSwipeLeft()" class="item-remove-animate item-borderless item-stable item-borderless" style="margin-bottom: 10px;">
+                <h3>Career Summary</h3>
+                <p style="white-space: normal;">{{ summary.careerSummary }}</p><br />
+                <h3>Summary Of Qualification</h3>
+                <p style="white-space: normal;">{{ summary.summaryOfQualification }}</p>
+                <ion-delete-button class="ion-trash-a" ng-click="onItemDelete(summary)"></ion-delete-button>
+                <ion-reorder-button class="ion-ios-compose-outline" ng-click="onItemUpdate(summary)"></ion-reorder-button>
+            </ion-item><br />
+        </ion-list>
+    </ion-content>
+</ion-view>

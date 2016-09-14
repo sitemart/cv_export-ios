@@ -1,0 +1,33 @@
+<ion-view id="page6" class=" ">
+    <ion-nav-buttons  side="right" side="primary">
+        <a class="button" href="#/Status"><i class="icon ion-ios-person"></i> </a>
+        <button class="button" ng-click="itemAdd(item)"><i class="icon ion-android-add"></i> </button>
+        <button class="button" ng-click="data.showDelete = !data.showDelete;"><i class="icon ion-ios-trash-outline"></i> </button>
+        <button class="button" ng-click="data.showDelete = false; data.showReorder = !data.showReorder"><i class="icon ion-compose"></i> </button>
+
+    </ion-nav-buttons>
+	<ion-sub-head class="bar bar-subheader">
+        <h3 class="title">Achievements</h3>
+    </ion-sub-head>
+    <ion-content padding="true" class="has-header has-subheader ">
+	<div ng-if="achievements.length === 0" class="emptyPageBlock">
+        <img src="img/achievements.svg" style="opacity: 0.3; max-height: 120px;">
+        <h3 class="nomargin">This section Empty</h3>
+        <p class="nomargin">Enter relevant information that'll <br />appear on your cv</p>
+        <button class="button button-stable" ng-click="itemAdd(item)">
+            Create
+        </button>
+    </div>
+        <ion-list show-delete="data.showDelete" show-edit="data.showEdit" show-reorder="data.showReorder" ng-if="achievements.length > 0">
+            <ion-item ng-repeat="achievement in achievements" on-swipe-left="onItemSwipeLeft()" achievement="achievement" class="item-remove-animate item-stable item-borderless" style="margin-bottom: 10px;">
+
+                <h3>{{ achievement.option }}</h3>
+                <p>{{ achievement.title }}</p>
+                <p><small>{{ achievement.summary }}</small></p>
+                <ion-delete-button class="ion-trash-a" ng-click="onItemDelete(achievement)"></ion-delete-button>
+                <ion-reorder-button class="ion-ios-compose-outline" ng-click="onItemUpdate(achievement)"></ion-reorder-button>
+            </ion-item>
+
+        </ion-list>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,27 @@
+<ion-view title="" id="loginPage" class="no-header adminPage"  hide-nav-bar="true">
+    <ion-content padding="true">
+        <img src="img/logo.png" class="admin_logo" />
+        <form id="login-form" class="list adminForm">
+            <ion-list id="login-list3" class=" ">
+                <label class="item item-input " id="login-input1">
+                    <span class="input-label">Username</span>
+                    <input type="text" placeholder="" class="username" autocomplete="off">
+                </label>
+                <label class="item item-input " id="login-input2">
+                    <span class="input-label">Password</span>
+                    <input type="password" placeholder="" class="password" autocomplete="off">
+                </label>
+            </ion-list>
+            <button id="login-button1" class=" button button-positive  button-block " ng-click="login()">Log in</button>
+            <div class="row row-no-padding">
+                <div class="col row-no-padding">
+                    <a href="#/signup"   class="button button-clear  button-block">Signup</a>
+                </div>
+                <div class="col row-no-padding">
+                    <a href="#/recover"  class="button button-clear button-block">Recover</a>
+                </div>
+            </div>
+        </form>
+
+    </ion-content>
+</ion-view>

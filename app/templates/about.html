@@ -1,0 +1,49 @@
+<ion-view id="page5" class=" ">
+    <ion-nav-buttons  side="right" side="primary">
+        <a class="button" href="#/Status"><i class="icon ion-ios-person"></i> </a>
+        <button ng-if="abouts.length == 0" class="button" ng-click="itemAdd(item)"><i class="icon ion-android-add"></i> </button>
+        <button class="button" ng-click="data.showReorder = !data.showReorder"><i class="icon ion-compose"></i> </button>
+
+    </ion-nav-buttons>
+    <ion-content padding="true" class="has-header">
+        <div ng-if="abouts.length === 0" class="emptyPageBlock">
+            <img src="../img/credibility.svg"  style="opacity: 0.3; max-height: 120px;">
+            <h3 class="nomargin">Empty section</h3>
+            <p class="nomargin">Enter relevant information that'll <br />appear on your cv</p>
+            <button class="button button-stable" ng-click="itemAdd(item)">
+                Create
+            </button>
+        </div>
+        <ion-list show-delete="data.showDelete" show-edit="data.showEdit" show-reorder="data.showReorder" ng-if="abouts.length > 0">
+            <ion-item ng-repeat="about in abouts | limitTo:1" about="about" class="item-remove-animate item-stable item-borderless" style="margin-bottom: 10px;">
+                <h2>Hi, {{ about.firstName }} {{ about.middleName }} {{ about.lastName }}</h2>
+                <ion-reorder-button class="ion-ios-compose-outline" ng-click="onItemUpdate(about)"></ion-reorder-button>
+            </ion-item>
+        </ion-list>
+
+        <div class="padding" ng-if="abouts.length > 0">
+            <div class="row">
+                <div class="col"><b>Gender</b><br /> {{ abouts[0].gender }}</div>
+                <div class="col"><b>Date of Birth</b><br /> {{ abouts[0].dateOfBirth }}</div>
+            </div>
+            <div class="row">
+                <div class="col" ><b>Language</b><br /> {{ abouts[0].language }}</div>
+                <div class="col"><b>Nationality</b><br /> {{ abouts[0].nationality }}</div>
+            </div>
+            <div class="row">
+                <div class="col"><h4>Home Address</h4><p>{{ abouts[0].homeAddress }}</p></div>
+            </div>
+            <div class="row">
+                <div class="col"><h4>Phone Numbers</h4>
+                    <p>{{ abouts[0].mobilePhone }} <br/>{{ abouts[0].homePhone }}</p></div>
+            </div>
+            <div class="row">
+                <div class="col"><h4>Email</h4><p>{{ abouts[0].emailAddress }}</p></div>
+            </div>
+            <div class="row">
+                <div class="col"><h4>Website</h4><p>{{ abouts[0].website }}</p></div>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

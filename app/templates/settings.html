@@ -1,0 +1,76 @@
+<ion-view title="Settings" id="page6" class=" ">
+    <ion-nav-buttons  side="right" side="primary">
+
+    </ion-nav-buttons>
+    <ion-content padding="true" class="has-header">
+        <ul class="list">
+            <div class="item item-divider">
+                General Settings
+            </div>
+            <li class="item item-toggle ">
+                Update after edit
+                <label class="toggle toggle-positive">
+                    <input type="checkbox" class="setUpdateEdit" checked>
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </li>
+            <div class="item item-divider">
+                Print Settings
+            </div>
+            <p class="item"><small>The app currently offers the following CV layouts.</small></p>
+            <label class="item item-input item-select">
+                <div class="input-label">
+                    Print Layout
+                </div>
+                <select class="setPrintLayout">
+                    <option value="default">Classic</option>
+                    <option value="default" selected>Modern</option>
+                    <option class="default">More Coming Soon</option>
+                </select>
+            </label>
+
+
+            <div class="card">
+                <div class="item item-divider">
+                    File Format Output
+                </div>
+                <li class="item item-checkbox item-icon-right checkbox-assertive">
+                    PDF
+                    <label class="checkbox">
+                        <input class="updatePDFOutput" type="checkbox" checked>
+                    </label>
+                    <i class="icon ion-android-document"></i>
+                </li>
+                <li class="item item-checkbox item-icon-right checkbox-positive">
+                    Microsoft Office
+                    <label class="checkbox">
+                        <input class="updateWordOutput" type="checkbox" checked>
+                    </label>
+                    <i class="icon ion-social-windows-outline"></i>
+                </li>
+                <li class="item item-checkbox item-icon-right checkbox-balanced">
+                    HTML url (Private)
+                    <label class="checkbox">
+                        <input class="updateHTMLOutput" type="checkbox" checked>
+                    </label>
+                    <i class="icon ion-social-html5-outline"></i>
+                </li>
+            </div>
+            <div class="item item-divider">
+               Default Email File Format
+            </div>
+            <label class="item item-input item-select">
+                <div class="input-label">
+                    Email format
+                </div>
+                <select>
+                    <option value="default" selected>PDF</option>
+                    <option value="default">Microsoft Office</option>
+                    <option class="default">HTML Url</option>
+                </select>
+            </label>
+        </ul>
+    </ion-content>
+</ion-view>
