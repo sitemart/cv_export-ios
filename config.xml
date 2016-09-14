@@ -48,7 +48,6 @@
     <gap:plugin name="cordova-plugin-statusbar" source="npm"/>
     <gap:plugin name="ionic-plugin-keyboard" source="npm"/>
     <gap:plugin name="nl.x-services.plugins.socialsharing" source="npm" />
-    <gap:plugin name="com.stevenpartridge.inappbrowser" source="pgb" />
     <icon src="icon.png"/>
     <splash src="splash.png" />
     <platform name="ios">
