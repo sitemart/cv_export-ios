@@ -52,7 +52,7 @@
     <icon src="icon.png"/>
     <splash src="splash.png" />
     <platform name="ios">
-        <icon src="resources/android/icon.png" width="192" height="192" />
+        <icon src="resources/ios/icon.png" width="192" height="192" />
         <!-- iPhone and iPod touch -->
         <splash src="resources/ios/Default.png" width="320" height="480" />
         <splash src="resources/ios/Default@2x.png" width="640" height="960" />
